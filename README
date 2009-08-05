@@ -1,0 +1,10 @@
+== iTunesCOMSDK for Ruby
+
+This project aims to provide an interface to iTunes on Windows using its
+COM API.
+
+=== Ideas
+
+* Provide a RESTful API for a local iTunes instance, so for example,
+  you can run iTunes in a virtual machine and access that instance
+  from the host (i.e. Linux).
