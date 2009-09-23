@@ -2,8 +2,6 @@ module ITunes
 	# SourceCollection is a collection of Sources. Works like Array, but also implements some
 	# extra iTunes functionality.
 	class SourceCollection
-		include Enumerable
-		
 		# Pass in the WIN32OLE object that is the app.
 		def initialize(app)
 			@app = app
@@ -16,6 +14,12 @@ module ITunes
 		def [](index)
 			populate_sources_array
 			return @sources[index]
+		end
+
+		# Returns the number of sources
+		def size
+			populate_sources_array
+			return @sources.size
 		end
 
 		# Yields each source in the collection.
