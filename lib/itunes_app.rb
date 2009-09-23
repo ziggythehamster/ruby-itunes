@@ -83,6 +83,13 @@ module ITunes
 			@app.Quit
 		end
 
+		######## COLLECTIONS ######################################################
+
+		# Returns an ITunes::SourceCollection
+		def sources
+			return ITunes::SourceCollection.new(@app)
+		end
+		
 		######## PROPERTIES #######################################################
 		
 
